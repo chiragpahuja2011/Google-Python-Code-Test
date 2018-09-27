@@ -73,22 +73,26 @@ def fix_start(s):
 def mix_up(a, b):
   # +++your code here+++
   s = a + ' ' + b
-  
+
   s1 = s.split(' ')
   # first two char for a
   s2 = s1[0][0:2]
   # fist two char for b
-  s3 = s1[1][0:2] 
-  # remain char for a 
+  s3 = s1[1][0:2]
+  # remain char for a
   s4 = s1[0][2:]
   # remain char for b
   s5 = s1[1][2:]
 
-  
+
   sfinal =  s3+s4+ ' '+s2+s5
-    
+
   return sfinal
 
+#alternate solution to mix_up
+def mix_up1(a,b):
+    new_string = b[:2] + a[2:] + ' ' + a[:2] + b[2:]
+    return new_string
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
@@ -117,7 +121,7 @@ def main():
   test(both_ends('a'), '')
   test(both_ends('xyz'), 'xyyz')
 
-  
+
   print
   print ('fix_start')
   test(fix_start('babble'), 'ba**le')
