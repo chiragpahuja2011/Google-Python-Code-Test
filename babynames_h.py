@@ -63,6 +63,13 @@ def extract_names(filename):
 
   #
   i = 0
+#Dictionary usage is to take care of below mentioned part of the problem
+#Rather than treat the boy and girl names separately,
+#we'll just lump them all together. In some years, a name appears more
+#than once in the html, but we'll just use one number per name.
+#[Optional: make the algorithm smart about this case and choose whichever
+#number is smaller.]
+
   name_dict={}
   while i < len(rank_name_list):
     #unpack 3 elements at the same time
